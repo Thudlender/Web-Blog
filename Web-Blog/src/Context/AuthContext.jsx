@@ -1,12 +1,12 @@
 import { useState, useContext, createContext, useEffect, Children } from "react";
 import AuthService from "../../service/auth.service";
-import { Cookies } from "react-cookies";
+import { Cookies } from "react-cookie";
 
 const cookies = new Cookies();
 
 const AuthContext = createContext(null);
 
-const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ Children }) => {
     const [user, setUser] = useState(getUser);
 
     const login = (user) => setUser(user);
@@ -30,7 +30,7 @@ const AuthProvider = ({ children }) => {
 
     return (
         <AuthContext.Provider value={{ user, login, logout }}>
-            {children}
+            {Children}
         </AuthContext.Provider>
     );
 };

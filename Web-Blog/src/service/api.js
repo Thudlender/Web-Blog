@@ -7,4 +7,12 @@ const instance = axios.create({
   },
 });
 
+instance.interceptors.request.use((congfig)=>{
+  const token ="";
+  if(token){
+    congfig.headers["x-access-token"] = token
+  }
+  return congfig;
+});
+
 export default instance;
