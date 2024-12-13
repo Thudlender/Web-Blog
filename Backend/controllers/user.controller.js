@@ -64,6 +64,20 @@ exports.Login = async (req, res) => {
           message: " Internal server error: Cannot login! cannot generate token",
         });
       }
-    })
+
+      //token generated
+      res.send({
+        message: "User logged in successfully",
+        id: userDoc._id,
+        username,
+        accessToken: token,
+      })
+    });
+  } catch (error) {
+    res.status(500).send({
+      message:
+      error.message ||
+      "Something error occurred while logging in a new user.",
+    });
   }
-}
+};

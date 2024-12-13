@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AuthService from '../../service/auth.service';
 import LoginBtn from './LoginBtn';
 import RegisterBtn from './RegisterBtn';
 
 const Navbar = () => {
-  const { user, logout }
+  const [user, setUser] = useState(null);
+  // const 
   return (
     <div>
       <div className="navbar bg-base-100">

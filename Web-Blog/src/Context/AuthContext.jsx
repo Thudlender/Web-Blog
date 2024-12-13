@@ -22,7 +22,7 @@ const AuthProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        cookies.set("user", user, {
+        cookies.set("user", JSON.stringify(user), {
             path: "/",
             expires: new Date(Date.now() + 86400),
         });
