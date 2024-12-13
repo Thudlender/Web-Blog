@@ -1,7 +1,7 @@
 import api from "./api";
 import { Cookies } from "react-cookie";
 const API_URL = import.meta.env.VITE_BASE_URL + "/auth";
-
+//Cookie monster
 const cookies = new Cookies();
 const register = async (username, password) => {
   return await api.post(API_URL + "/register", { username, password });
