@@ -1,4 +1,5 @@
 const express = require("express");
+
 const cors = require("cors");
 require("dotenv").config();
 
@@ -24,6 +25,7 @@ app.get("/", (req, res) => {
 
 //use Router
 app.use("/api/v1/auth", userRouter);
+app.use("/api/v1/auth", postRouter);
 
 app.listen(PORT, () => {
   console.log("Server is running on http://localhost:" + PORT);
