@@ -38,7 +38,7 @@ const Register = () => {
     }
   };
 
-  return <div></div>;
+  return <div>  </div>;
 };
 
 export default Register;

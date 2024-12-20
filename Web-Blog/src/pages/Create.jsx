@@ -2,6 +2,7 @@ import { useState } from "react"
 import {useNavigate} from "react-router"
 import Swal from "sweetalert2";
 import PostService from "../service/post.service";
+import Editor from "../components/Editor";
 
 
 const Create = () => {
@@ -20,6 +21,9 @@ const Create = () => {
     setPostDetail({ ...postDetail, [name]: value });
     }
   };
+  const handleContentChange = (value) =>{
+    setContent
+  }
 
   const handleSubmit = async () => {
     try {
