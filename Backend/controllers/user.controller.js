@@ -57,7 +57,7 @@ exports.Login = async (req, res) => {
       return;
     }
 
-    //Login success
+    //login success
     jwt.sign({ username, id: userDoc._id}, secret, {}, (err, token) => {
       if (err){
         return res.status(500).send({
