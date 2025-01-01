@@ -1,4 +1,5 @@
 import axios from "axios";
+import TokenService from "./token.service";
 const baseURL = import.meta.env.VITE_BASE_URL;
 const instance = axios.create({
   baseURL: baseURL,
@@ -8,7 +9,7 @@ const instance = axios.create({
 });
 
 instance.interceptors.request.use((config) => {
-  const token = "";
+  const token = TokenService.getLocalAccessToken();
   if (token) {
     config.headers["x-access-token"] = token;
   }
