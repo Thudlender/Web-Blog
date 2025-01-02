@@ -7,7 +7,7 @@ const secret = process.env.SECRET;
 
 exports.register = async (req, res) => {
   const { username, password } = req.body;
-  if (!username || password) {
+  if (!username || !password) {
     res.status(400).send({
       message: "Please provide all require fields!",
     });
@@ -32,7 +32,7 @@ exports.register = async (req, res) => {
   }
 };
 
-exports.Login = async (req, res) => {
+exports.login = async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
     res.status(400).send({

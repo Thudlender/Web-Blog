@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const baseURL = import.meta.env.VITE_PIC_URL;
 
@@ -17,7 +17,7 @@ const Post = ({ title, author, summary, cover, createdAt, _id }) => {
         </figure>
         <div className="p-6 md:1/2 flex flex-col justify-between card-body">
           <a href={"/post/ + _id"} className="href">
-            <h2 className="card-title">{title}!</h2>
+            <h2 className="card-title">{title}</h2>
           </a>
           
           <p>
@@ -33,4 +33,4 @@ const Post = ({ title, author, summary, cover, createdAt, _id }) => {
   );
 }
 
-export default Post
+export default Post;
