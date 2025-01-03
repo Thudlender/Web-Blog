@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import PostService from "../services/post.service";
 import Swal from "sweetalert2";
-import { useParams } from "react-router";
 import { useAuthContext } from "../Context/AuthContext";
 // import { format } from "date-fns"
 import { useNavigate } from "react-router";
