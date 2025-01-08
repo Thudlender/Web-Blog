@@ -12,7 +12,7 @@ const token = req.headers["x-access-token"]
         if (err) return res.status(403).json({
             message: "Access Forbidden!!"
         });
-        req.userId = decoded.indexOf;
+        req.userId = decoded.id;
         req.username = decoded.username;
         next();
     });
