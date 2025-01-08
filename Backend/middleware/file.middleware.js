@@ -1,7 +1,7 @@
 const multer = require("multer");
 const path = require("path");
 
-const firebaseConfig = require("../configs/firebase.config");
+const firebaseConfig = require("../configs/firebase.configs");
 // console.log(firebaseConfig);
 const {
     getStorage,
